@@ -29,7 +29,6 @@
             </ul>
         </div>
     </nav>
-
     <div class="container" style="margin-top: 120px">
         <div class="row mt-3">
             <div class="col">
@@ -98,11 +97,8 @@
                     <td>{{ $Berita->deskripsi }}</td>
                     <td>{{ $Berita->isi }}</td>
                     <td>
-                        @if ($Berita->foto)
-                        <img style="width: 50px" src="{{ asset('news_images/' . $Berita->foto) }}" alt="cover Berita">
-                        @else
-                        No Image
-                        @endif
+                        <img style="width: 50px" src="{{
+asset('/images/' . $Berita->foto) }}" alt="cover berita">
                     </td>
                     <td>
                         <a class="btn btn-outline-warning" href="{{ route('admin.editberita', $Berita->id) }}">Edit</a>

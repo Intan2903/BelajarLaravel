@@ -10,25 +10,27 @@ n.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark  shadow-sm fixed-top" style="background-color: #94AF9F;">
-        <div class="container ">
-            <a class="navbar-brand mr-auto" href="/">Politeknik Negeri Bengkalis | DIV Rekayasa Perangkat Lunak</a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item ml-auto">
-                        <a class="nav-link" href="{{ route('user.home') }}">Buku</a>
-                    </li>
-                    <li class="nav-item ml-auto">
-                        <a class="nav-link" href="{{ route('user.lihatberita') }}">Berita</a>
-                    </li>
-                    <li class="nav-item ml-auto">
-                        <a class="nav-link" href="{{ route('profile') }}">Profile</a>
-                    </li>
-                    <li class="nav-item ml-auto">
-                        <a class="nav-link" href="{{ route('aktivitas') }}">Aktivitas</a>
-                    </li>
-                </ul>
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top" style="background-color: #94AF9F;">
+        <div class="container">
+            <a class="navbar-brand" href="/">Politeknik Negeri Bengkalis | D-IV Rekayasa Perangkat Lunak</a>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('user.home') }}" style="color: white;">Buku</a>
+                </li>
+                <!-- <li class="nav-item" style="margin-left: 30px">
+                            <a class="nav-link" href="{{ route('admin.buku') }}" style="color: white;">Buku</a>
+                        </li> -->
+                <li class="nav-item" style="margin-left: 30px">
+                    <a class="nav-link" href="{{ route('user.lihatberita') }}" style="color: white;">Berita</a>
+                </li>
+                <!-- <li class="nav-item" style="margin-left: 30px">
+                            <a class="nav-link" href="{{ route('admin.peminjaman') }}"
+                                style="color: white;">Peminjaman</a>
+                        </li>
+                        <li class="nav-item" style="margin-left: 30px">
+                            <a class="nav-link" href="{{ route('admin.lulusan') }}" style="color: white;">Lulusan</a>
+                        </li> -->
+            </ul>
         </div>
     </nav>
     <!DOCTYPE html>
@@ -102,6 +104,6 @@ Auth::user()->name }}</h4>
 e.min.js"></script>
     </body>
 
-    </html>
+    <hmtl>
 
-</html>
+    </html>

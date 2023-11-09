@@ -97,11 +97,8 @@
                 <tr>
                     <td scope="row">{{ $index + $data->firstItem() }}</td>
                     <td>
-                        @if ($lulusan->foto)
-                        <img style="width: 50px" src="{{ asset('news_images/' . $lulusan->foto) }}" alt="foto">
-                        @else
-                        No Image
-                        @endif
+                        <img style="width: 50px" src="{{
+asset('/images/' . $lulusan->foto) }}" alt="Lulusan">
                     </td>
                     <td>{{ $lulusan->nama }}</td>
                     <td>{{ $lulusan->jurusan }}</td>

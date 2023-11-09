@@ -46,21 +46,23 @@
                 <form action="/postEditBerita/{{ $data->id }}" method="POST" enctype="multipart/form-data">
 
                     @csrf
-                    <!-- form gambar berita -->
-                    <div class="form-group">
-                        <label class="text-secondary mb-2">Gambar Berita</label>
-                        <input class="form-control mb-2" placeholder="Nama file lama: {{ $data->foto }}" disabled>
-                        <input class="form-control" type="file" name="foto">
-                        <div class="form-text">Maksimal ukuran gambar cover berita 5MB</div>
-                        <img class="mt-3" style="width: 100px" src="{{ asset('images/' . $data->foto) }}" alt="foto">
-                    </div>
                     <!-- update judul berita -->
                     <div class="form-group">
                         <label class="text-secondary mb-2">Judul Berita</label>
-                        <input type="text" class="form-control border border-secondary form-control" name="judulBerita"
+                        <input type="text" class="form-control border border-secondary form-control" name="judul"
                             required value="{{ $data->judul }}">
                         <span class="text-danger">
-                            @error('judulBerita')
+                            @error('judul')
+                            {{ $message }}
+                            @enderror
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label class="text-secondary mb-2">Deskripsi</label>
+                        <input type="text" class="form-control border border-secondary form-control" name="deskripsi"
+                            required value="{{ $data->deskripsi }}">
+                        <span class="text-danger">
+                            @error('deskripsi')
                             {{ $message }}
                             @enderror
                         </span>
@@ -68,8 +70,16 @@
                     <!-- update isi berita -->
                     <div class="form-group">
                         <label class="text-secondary mb-2">Isi Berita</label>
-                        <textarea class="form-control" name="isiBerita" style="height: 250px"
+                        <textarea class="form-control" name="isi" style="height: 250px"
                             required>{{ $data->isi }}</textarea>
+                    </div>
+                    <!-- form gambar berita -->
+                    <div class="form-group">
+                        <label class="text-secondary mb-2">Gambar Berita</label>
+                        <input class="form-control mb-2" placeholder="Nama file lama: {{ $data->foto }}" disabled>
+                        <input class="form-control" type="file" name="foto">
+                        <div class="form-text">Maksimal ukuran gambar cover berita 5MB</div>
+                        <img class="mt-3" style="width: 100px" src="{{ asset('images/' . $data->foto) }}" alt="foto">
                     </div>
                     <button type="submit" class="btn btn-success mt-5">Update Data Berita</button>
                 </form>
